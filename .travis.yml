@@ -5,17 +5,14 @@ services:
 before_install:
   - docker build -t yasuhiro/news-react -f Dockerfile.dev .
 
-script:
-  - docker run -e CI=true yasuhiro/news-react npm run test
-
 deploy:
   edge: true
   provider: elasticbeanstalk
   region: 'us-east-1'
-  app: "news"
-  env: "News-env-1"
+  app: "news-react"
+  env: "NewsReact-env"
   bucket_name: "elasticbeanstalk-us-east-1-360399115248"
-  bucket_path: "news"
+  bucket_path: "news-react"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
