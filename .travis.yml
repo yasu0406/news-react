@@ -5,9 +5,6 @@ services:
 before_install:
   - docker build -t yasuhiro/docker-test -f Dockerfile.dev .
 
-script:
-  - docker run -e CI=true yasuhiro/docker-test yarn run test
-
 deploy:
   edge: true
   provider: elasticbeanstalk
