@@ -12,7 +12,7 @@ deploy:
   region: 'us-east-1'
   app: "news-react"
   env: "NewsReact-env"
-  bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-1-360399115248"
+  bucket_name: "elasticbeanstalk-us-east-1-360399115248"
   bucket_path: "news-react"
   on:
     branch: master
