@@ -13,7 +13,7 @@ deploy:
   provider: elasticbeanstalk
   region: 'us-east-1'
   app: "news"
-  env: "News-env"
+  env: "News-env-1"
   bucket_name: "elasticbeanstalk-us-east-1-360399115248"
   bucket_path: "news"
   on:
