@@ -5,6 +5,13 @@ services:
 before_install:
   - docker build -t yasuhiro/news-react -f Dockerfile.dev .
 
+language: ruby
+rvm:
+  - 2.5
+  - 2.6
+  - jruby
+  - truffleruby
+
 deploy:
   edge: true
   provider: elasticbeanstalk
