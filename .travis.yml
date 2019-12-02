@@ -2,8 +2,6 @@ sudo: required
 services:
   - docker
 
-language: node_js
-
 before_install:
   - docker build -t yasuhiro/news-react -f Dockerfile.dev .
 
