@@ -3,7 +3,7 @@ WORKDIR './app'
 COPY package.json .
 RUN yarn
 COPY . .
-RUN yarn run dev
+RUN node index.js
 
 FROM nginx
 EXPOSE 80
