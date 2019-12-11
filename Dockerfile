@@ -1,7 +1,7 @@
 FROM node:alpine as builder
 WORKDIR './app'
 COPY package.json .
-RUN yarn
+RUN yarn run build
 COPY . .
 
 FROM nginx
